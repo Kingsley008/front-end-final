@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网易教育产品部</title>
+    <meta  name="keywords" content="网易，公开课，云课堂，中国大学，MOOC，教育产品部" >
+    <meta  name="description" content="网易旗下教育产品总汇，特色综合展示网站">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="shortcut icon" href="imgs/titleicon.png">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+<body>
+<!--
+    <div class="m-modal container">
+         <div class="video container">
+            <div class="m-modal middle"></div>
+             <div class="m-modal video">
+             <h3>请观看下面的视频</h3>
+            <button class="f-h" id="close"></button>
+            <label for="close"></label>
+            <video class="m-modal video" controls>
+                <source src="http://mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.mp4">
+                Your browser does not support the video tag.
+            </video>
+             </div>
+         </div>
+    </div>-->
+
+     <!-- JS 用cookies控制的提示-->
+    <div class="m-notice wrap" id="notice">
+        <div class="m-notice f-c">
+        <p>网易云课堂微专业，帮助你掌握专业技能，令你求值或者加薪多一份优势！</p> <a href="" target="_blank">立即查看></a>
+            <button class="m-notice click icon" id="noticeClick"></button><label for="noticeClick">不再提醒</label>
+        </div>
+    </div>
+     <!-- header -->
+    <div class="g-header">
+        <div class="m-nav f-c">
+                <div class="m-nav left">
+                    <span class="m-nav logo"></span>
+                    <h1 style="display: none">网易教育产品部</h1>
+                    <button id = "guanzhu"><img  class="m-nav left guanzhu" src="imgs/guanzhu.png">关注</button>
+                    <!-- 已经关注版块 -->
+                    <span id="guanzhued" class="m-nav guanzhued f-h"><button  class="m-nav dis" disabled>已关注</button><a href="">取消</a></span>
+                    <span  class="m-nav fengsi">粉丝</span><span class="m-nav fengsi num">45</span>
+                </div>
+
+                <div class="m-nav right">
+                    <ul>
+                        <li><a href="http://open.163.com/" target="_blank">网易公开课</a></li>
+                        <li><a href="http://study.163.com/" target="_blank">云课堂</a></li>
+                        <li class="m-nav icon"><a href="http://www.icourse163.org/" target="_blank" >中国大学MOOC</a></li>
+                    </ul>
+                </div>
+        </div>
+    </div>
+
+        <div id="slidercontainer" class="m-slider container">
+            <div  id="overflow" class="f-oh">
+            <!-- header slider-->
+            <!--<div class="m-slider wrap">
+                <div class="m-slider sliders">
+                    <img src="imgs/banner1.jpg" width="1650px" height="460px">
+                </div>
+                <div class="m-slider sliders">
+                    <img src="imgs/banner2.jpg" width="1650px" height="460px">
+                </div>
+                <div class="m-slider sliders">
+                    <img src="imgs/banner3.jpg" width="1650px" height="460px">
+                </div>
+            </div>-->
+            </div>
+        </div>
+
+            <ul  id="btnnum" class="cursors">
+                <li data-num = "1"  class="cursors one focus "></li>
+                <li data-num = "2"  class="cursors two"></li>
+                <li data-num = "3" class="cursors three"></li>
+            </ul>
+
+
+
+    <div class="g-description wrap">
+            <ul class="g-description center f-c">
+                <li id="p1" class="m-description f-c"><!--li: before-->
+                    <div class="m-description right">
+                    <h3>网易公开课</h3>
+                    <p>推出国内外名校公开课，涉及广泛的学科，名校老师认真讲解深度剖析，网易视频公开课频道搭建起强有力的网络视频教学平台。</p>
+                    <a href="http://open.163.com/" target="_blank">了解更多 ></a>
+                    </div>
+                </li>
+                <li  id="p2" class="m-description f-c"><!--li: before-->
+                    <div class="m-description right">
+                    <h3>云课堂</h3>
+                    <p>网易旗下大型在线学习平台，该平台面向学习者提供海量免费、优质课程,创新的个性化学习体验，自由开放的交流互动环境</p>
+                    <a href="http://study.163.com/" target="_blank">了解更多 ></a>
+                    </div>
+                </li>
+                <li id="p3" class="m-description f-c"><!--li: before-->
+                    <div class="m-description right">
+                    <h3>中国大学MOOC</h3>
+                    <p>是爱课程网携手云课堂打造的在线学习平台，每一个有提升愿望的人,都可以在这里学习中国最好的大学课程，学完还能获得认证证书。
+                    </p>
+                    <a  href="http://www.icourse163.org/" target="_blank">了解更多 ></a>
+                    </div>
+                </li>
+            </ul>
+
+    </div>
+     <!-- 图片展示区 -->
+    <div class="g-imgslist">
+        <ul class="m-imgslist f-c">
+            <li><img src="imgs/DSC_1.png" width="322px" height="228px"></li>
+            <li><img src="imgs/DSC_1.png" width="322px" height="228px"></li>
+            <li><img src="imgs/DSC_1.png" width="322px" height="228px"></li>
+            <li><img src="imgs/DSC_1.png" width="322px" height="228px"></li>
+            <li><img src="imgs/DSC_1.png" width="322px" height="228px"></li>
+        </ul>
+    </div>
+
+
+     <!-- 课程内容区-->
+
+    <div class="g-bd">
+        <div class ="m-content main">
+            <div class="m-content nav">
+                <a  id="productdesign" class="m-content nav sec" href="class.json">产品设计</a>
+                <a id="coding" class="m-content nav"href="class.json">编程语言</a>
+            </div>
+            <ul id="contentContainer" class="m-content detail f-c">
+                <li class="m-content items">
+                    <img class="m-content imgs" src="imgs/classdemo.png" width="223px" height="123px">
+                    <div class="m-content padding">
+                        <a class="m-content  f-toe">混音全揭秘 舞曲实战篇 揭秘音乐揭秘xxx</a>
+                        <span class="m-content author">音频帮</span>
+                        <span class="m-content pnum">510</span>
+                        <span class="m-content price">￥800.00</span>
+                    </div>
+                    <div class="m-content hover">
+                        <div class="m-hover f-c">
+                            <img class="m-content imgs " src="imgs/classdemo.png" width="223px" height="123px">
+                            <div class="m-hover left">
+                                <h2>手绘画系列教程</h2>
+                                <span class="m-hover pnum">510人在学</span>
+                                <span>发布者：几分钟网</span>
+                                <span>分类：手绘设计</span>
+                            </div>
+                        </div>
+                        <div class="m-hover bottom">
+                            <p>生活中不乏有很多美好的画面，何不用画笔记录下来呢？那么就跟几分钟网一起来记录美好画面吧！</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div  class="m-aside wrap">
+            <div class="m-aside intro1">
+                <div class=" intro1 middle"></div>
+                <h3>机构介绍</h3>
+            </div>
+
+            <div class="m-aside intro2">
+             <!--   <div class="intro2 middle"></div> &lt;!&ndash; 1px 撑行高 垂直居中 &ndash;&gt;-->
+                <div class="m-aside middle wrap">
+                <span>观看下面的视频来了解吧：</span>
+                <video id="videoBtn"  preload="auto">
+                    <source src="http://mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.mp4">
+                    Your browser does not support the video tag.
+                </video>
+                </div>
+            </div>
+
+            <div class="m-aside title">
+                <h3>最热排行</h3>
+            </div>
+                <div id="rank">
+
+                </div>
+                <!--<ul class="m-aside rank ">
+                    <li class="m-aside items f-c">
+                        <img src="imgs/smalldemo.png" width="50px" height="50px">
+                        <div>
+                            <a class="m-content f-toe " style="display: block">舞曲揭秘音乐揭秘xxxx</a>
+                            <span class="m-content pnum ">21567</span>
+                        </div>
+                    </li>
+                    <li class="m-aside items f-c">
+                        <img src="imgs/smalldemo.png" width="50px" height="50px">
+                        <div>
+                            <a class="m-content f-toe ">舞曲揭秘音乐揭秘xxxx</a>
+                            <span class="m-content pnum ">21567</span>
+                        </div>
+                    </li>
+                    <li class="m-aside items f-c">
+                        <img src="imgs/smalldemo.png" width="50px" height="50px">
+                        <div>
+                            <a class="m-content f-toe ">舞曲揭秘音乐揭秘xxxx</a>
+                            <span class="m-content pnum ">21567</span>
+                        </div>
+                    </li>
+                    <li class="m-aside items f-c">
+                        <img src="imgs/smalldemo.png" width="50px" height="50px">
+                        <div>
+                            <a class="m-content f-toe ">舞曲揭秘音乐揭秘xxxx</a>
+                            <span class="m-content pnum ">21567</span>
+                        </div>
+                    </li>
+                    <li class="m-aside items f-c">
+                        <img src="imgs/smalldemo.png" width="50px" height="50px">
+                        <div>
+                            <a class="m-content f-toe ">舞曲揭秘音乐揭秘xxxx</a>
+                            <span class="m-content pnum ">21567</span>
+                        </div>
+                    </li>
+                    <li class="m-aside items f-c">
+                        <img src="imgs/smalldemo.png" width="50px" height="50px">
+                        <div>
+                            <a class="m-content f-toe ">舞曲揭秘音乐揭秘xxxx</a>
+                            <span class="m-content pnum ">21567</span>
+                        </div>
+                    </li>
+                    <li class="m-aside items f-c">
+                        <img src="imgs/smalldemo.png" width="50px" height="50px">
+                        <div>
+                            <a class="m-content f-toe ">舞曲揭秘音乐揭秘xxxx</a>
+                            <span class="m-content pnum ">21567</span>
+                        </div>
+                    </li>
+                    <li class="m-aside items f-c">
+                        <img src="imgs/smalldemo.png" width="50px" height="50px">
+                        <div>
+                            <a class="m-content f-toe ">舞曲揭秘音乐揭秘xxxx</a>
+                            <span class="m-content pnum ">21567</span>
+                        </div>
+                    </li>
+                    <li class="m-aside items f-c">
+                        <img src="imgs/smalldemo.png" width="50px" height="50px">
+                        <div>
+                            <a class="m-content f-toe ">舞曲揭秘音乐揭秘xxxx</a>
+                            <span class="m-content pnum ">21567</span>
+                        </div>
+                    </li>
+                    <li class="m-aside items f-c">
+                        <img src="imgs/smalldemo.png" width="50px" height="50px">
+                        <div>
+                            <a class="m-content f-toe ">舞曲揭秘音乐揭秘xxxx</a>
+                            <span class="m-content pnum ">21567</span>
+                        </div>
+                    </li>
+                </ul>-->
+            </div>
+    </div>
+
+    <div id="g-pages" class="g-pages">
+    </div>
+
+     <div class="g-footer">
+        <div class="g-footer wrap f-c">
+            <div class="m-footer z1">
+                <span class="m-footer logo"></span>
+                <h1 style="display: none">网易教育产品部</h1>
+                <p>&copy;014 icourse163.org 浙ICP备08114786号-1</p>
+                <p>icourses.cn 京ICP备12020869号-2 京公网安备110102000459-2</p>
+            </div>
+            <div class="m-footer z2">
+                <h4>友情链接：</h4>
+                <ul>
+                    <li><a href="">网易公开课</a></li>
+                    <li><a href="">网易云课堂</a></li>
+                    <li><a href="">中国大学MOOC</a></li>
+                </ul>
+            </div>
+            <div class="m-footer z3">
+            <h4>我们：</h4>
+            <ul>
+                <li><a href="">关于</a></li>
+                <li><a href="">联系</a></li>
+                <li ><a href="" class="m-footer weibo">关注</a></li>
+            </ul>
+          </div>
+
+        <div class="m-footer z4">
+            <h4>更多：</h4>
+            <ul>
+                <li><a href="">常见问题</a></li>
+                <li><a href="">意见反馈</a></li>
+            </ul>
+        </div>
+        </div>
+
+    </div>
+</body>
+
+<script src="js/md5.js"></script>
+<script src="js/DOMCompatibleMethods.js"></script>
+<script src="js/global.js"></script>
+<script src="js/loginModal.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/aside.js"></script>
+<script src="js/pagesdiv.js"></script>
+<script src="js/index.js"></script>
+
+
+</html>

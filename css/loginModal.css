@@ -1,0 +1,66 @@
+/*登录窗模块*/
+.m-modal.container{
+    position: fixed;
+    top:0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(51,51,51,0.5);
+    text-align: center;
+    z-index: 999;
+}
+.m-modal.wrap{
+    position: relative;
+    width: 389px;
+    height: 288px;
+    background-color: #fff;
+    display: inline-block;
+}
+.m-modal h3{
+    font: 18px/28px 微软雅黑;
+    margin: 20px 0 20px 45px;
+    text-align: left;
+}
+.m-modal input, .m-modal button{
+    display: inline-block;
+    width: 296px;
+    height: 44px;
+    float: none;
+
+}
+.m-modal button{
+    background-color: #39a030;
+    color: #fff;
+    border: none;
+    box-shadow: 1px 1px 1px 1px #d5e3da;
+    width: 300px;
+    margin-top: 20px;
+}
+.m-modal p{
+
+    margin-top: 10px;
+}
+.m-modal.middle{
+    width: 1px;
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.m-modal label:before{
+    background: url("../imgs/sprite.png") no-repeat -145px -77px;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    content: "";
+
+}
+
+.m-modal label{
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    text-align: right;
+    right: 6px;
+    top: 2px;
+    cursor: pointer;
+}

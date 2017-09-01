@@ -1,4 +1,3 @@
-
 var util = util || {};
 //id
 util.$ = function (id) {
@@ -124,4 +123,11 @@ util.addclass = function (node, classname) {
     }
 }
 
+util.extend = function (o1,o2) {
+    for(var i in o2 ){
+        if(o1.i == undefined){
+            o1.i  = o2.i;
+        }
+    }
 
+}

@@ -62,7 +62,6 @@
                         login.close(document.body);
                         guanzhuBtn.className = guanzhuBtn.className + " f-h";
                         guanzhued.className =  guanzhued.className.replace("f-h","");
-                        console.log(guanzhuBtn.className, guanzhued.className);
                     }
                 })
             })

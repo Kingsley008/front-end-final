@@ -1,5 +1,5 @@
     var templateslider = '<div class="m-slider wrap">\n' +
-        '                <div class="m-slider sliders">\n' +
+        '                <div class="m-slider sliders" style="z-index: 10">\n' +
         '                    \n' +
         '                </div>\n' +
         '                <div class="m-slider sliders">\n' +
@@ -56,21 +56,23 @@
             },
             _setp:function (offset) {
                 this.sliderindex = this.sliderindex+ offset;
+                this.wrap.style.transitionProperty = 'left';
                 this.wrap.style.transitionDuration = '.5s';
                 this._calc();
             },
             _calc:function () {
+                this.sliders = Compatible.getElementsByClassName(this._layout,"sliders"); // IE bug 暂时解决方法
                 var slideindex  = this.sliderindex = this.format(this.sliderindex,this.picnum);
                 var preslideindex = this.format((slideindex - 1),3);
                 var nextslideindex = this.format((slideindex + 1),3);
-                this.sliders[preslideindex].style.right = (-1*1650)+"px";
-                this.sliders[slideindex].style.right = (1*1650)+"px";
-                this.sliders[nextslideindex].style.right = (2*1650) +"px";
+                this.sliders[preslideindex].style.right = ( preslideindex * 1650)+"px";
+                this.sliders[slideindex].style.right = (slideindex * 1650)+"px";
+                this.sliders[nextslideindex].style.right = (nextslideindex * 1650) +"px";
                 //容器反向平移
-                this.wrap.style.left = (1 * 1650) +"px";
+                this.wrap.style.left = (slideindex * 1650) +"px";
                 for(var i = 0; i < this.sliders.length; i++){
-                    if (this.sliders[i].className.indexOf('focus') == 1){
-                        this.sliders[i].className = this.sliders[i].className.replace("focus","");
+                    if (this.sliders[i].className.indexOf(' focus') > -1){
+                        this.sliders[i].className = this.sliders[i].className.replace(" focus","");
                     }
                 }
                 this.sliders[slideindex].className = this.sliders[slideindex].className +" focus";
@@ -87,9 +89,9 @@
                 return ((sliderindex + picnum) % 3)
             },
             nav:function (btnnum) {
-                this.sliderindex = btnnum;
-                this.wrap.style.transitionDuration = '0';
-                this._next();
+                this.sliderindex = btnnum + 1;
+                this.wrap.style.transitionDuration = '0s';
+                this._calc();
             }
 
         }

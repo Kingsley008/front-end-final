@@ -9,8 +9,8 @@ var templateLogin = '\n' +
     '                <p><input name="password" type="password" placeholder="密码"></p>\n' +
     '                <p><button name="login" class="m-modal login" type="submit">登 入</button></p>\n' +
     '            </form>\n'
-    '        </div>\n' +
-    '    </div>'
+'        </div>\n' +
+'    </div>'
 
 function node2html(templateLogin) {
     var container = document.createElement('div');
@@ -20,32 +20,32 @@ function node2html(templateLogin) {
 
 function LoginModal(options) {
     var options = options || {};
-    this.closeBtn = Compatible.getElementsByClassName(this._layout,'f-h')[0];
-    this.loginBtn = Compatible.getElementsByClassName(this._layout,'login')[0];
+    this.closeBtn = Compatible.getElementsByClassName(this._layout, 'f-h')[0];
+    this.loginBtn = Compatible.getElementsByClassName(this._layout, 'login')[0];
 
-  /*  this.userName = Compatible.getElementsByTagName('input')[0].value;
-    this.password = md5 (Compatible.getElementsByClassName('input')[1].value);*/
+    /*  this.userName = Compatible.getElementsByTagName('input')[0].value;
+      this.password = md5 (Compatible.getElementsByClassName('input')[1].value);*/
 
 }
 
-LoginModal.prototype =  (function () {
-    var layout  = node2html(templateLogin).cloneNode(true);
+LoginModal.prototype = (function () {
+    var layout = node2html(templateLogin).cloneNode(true);
 
 
-    return{
-        _layout : layout,
-        close:function (Container,callback) {
-                /*  this._layout.className = (this._layout.className) + " f-h";*/
-                  Container.removeChild(this._layout);
-                  callback&&callback();
-            },
+    return {
+        _layout: layout,
+        close: function (Container, callback) {
+            /*  this._layout.className = (this._layout.className) + " f-h";*/
+            Container.removeChild(this._layout);
+            callback && callback();
+        },
         show: function (Container) {
             Container.appendChild(this._layout);
         },
-        closecall:function (callback) {
-            Compatible.addEvent(this.closeBtn,'click',function () {
-            this.close(callback);
-            }.bind(LoginModal.prototype),false)
+        closecall: function (callback) {
+            Compatible.addEvent(this.closeBtn, 'click', function () {
+                this.close(callback);
+            }.bind(LoginModal.prototype), false)
         }
     }
 })()
@@ -67,17 +67,17 @@ var tempVideo = '   <div class="m-modal container">\n' +
     '    </div>'
 
 function Video() {
-    this.closeBtn = Compatible.getElementsByClassName(this._layout,'f-h')[0];
+    this.closeBtn = Compatible.getElementsByClassName(this._layout, 'f-h')[0];
 }
 
 Video.prototype = (function () {
-    return{
-        _layout:node2html(tempVideo).cloneNode(true),
+    return {
+        _layout: node2html(tempVideo).cloneNode(true),
 
-        show:function (container) {
+        show: function (container) {
             container.appendChild(this._layout);
         },
-        close:function (container) {
+        close: function (container) {
             console.log("click");
             container.removeChild(this._layout);
         }
